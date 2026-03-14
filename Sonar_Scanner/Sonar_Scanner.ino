@@ -2,7 +2,8 @@
 
 Servo myServo;
 
-int trig = 10 int echo = 11;
+int trig = 10;
+int echo = 11;
 
 long duration;
 float distance;
@@ -15,7 +16,6 @@ int g = 5;
 int b = 6;
 
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(9600);
   myServo.attach(3);
 
@@ -29,7 +29,6 @@ void setup() {
   pinMode(b, OUTPUT);
 }
 void loop() {
-  //put your main code here, to run repeatedly:
   for (int deg = 0; deg < 180; deg++) {
     myServo.write(deg);
     delay(10);
@@ -43,16 +42,26 @@ void loop() {
     duration = pulseIn(echo, HIGH);
     distance = duration * 0.017;
 
-    //If nothing is in close range light is green and buzzer is off
-    if (distance > 40)( 
+    // If nothing is in close range light is green and buzzer is off
+    if (distance > 40) {
       digitalWrite(g, HIGH);
       digitalWrite(r, LOW);
       digitalWrite(b, LOW);
       noTone(buzzer);
-    )
-    //If distance is less than 40 millimeters but greater than 10 millimeters then light turns yellow
-    else if(distance > 10){
-      digitalWrite()
+    }
+    // If distance is less than 40 millimeters but greater than 10 millimeters then light turns yellow
+    else if (distance > 10) {
+      digitalWrite(g, HIGH);
+      digitalWrite(r, HIGH);
+      digitalWrite(b, LOW);
+      tone(buzzer, 100);  //Buzzer sounds at low frequency--100hz
+    }
+    // If something is in close range (less than 10 millimeters), trigger alert mode. LED flashes red and buzzer sounds
+    else {
+      digitalWrite(r, HIGH);
+      digitalWrite(g, LOW);
+      digitalWrite(b, LOW);
+      tone(buzzer, 500);  // Buzzer sounds at high frequency--500hz
     }
   }
   for (int deg = 180; deg > 0; deg--) {
@@ -67,5 +76,27 @@ void loop() {
 
     duration = pulseIn(echo, HIGH);
     distance = duration * 0.017;
+
+    // If nothing is in close range light is green and buzzer is off
+    if (distance > 40) {
+      digitalWrite(g, HIGH);
+      digitalWrite(r, LOW);
+      digitalWrite(b, LOW);
+      noTone(buzzer);
+    }
+    // If distance is less than 40 millimeters but greater than 10 millimeters then light turns yellow
+    else if (distance > 10) {
+      digitalWrite(g, HIGH);
+      digitalWrite(r, HIGH);
+      digitalWrite(b, LOW);
+      tone(buzzer, 100);  //Buzzer sounds at low frequency--100hz
+    }
+    // If something is in close range (less than 10 millimeters), trigger alert mode. LED flashes red and buzzer sounds
+    else {
+      digitalWrite(r, HIGH);
+      digitalWrite(g, LOW);
+      digitalWrite(b, LOW);
+      tone(buzzer, 500);  // Buzzer sounds at high frequency--500hz
+    }
   }
 }
