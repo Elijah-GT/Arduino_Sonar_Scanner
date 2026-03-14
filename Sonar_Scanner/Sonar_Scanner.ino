@@ -8,6 +8,7 @@ int echo = 11;
 long duration;
 float distance;
 
+// Passive buzzer
 int buzzer = 9;
 
 //Assignments for RGB LED
@@ -55,6 +56,7 @@ void loop() {
       digitalWrite(r, HIGH);
       digitalWrite(b, LOW);
       tone(buzzer, 100);  //Buzzer sounds at low frequency--100hz
+      Serial.println("WARNING");
     }
     // If something is in close range (less than 10 millimeters), trigger alert mode. LED flashes red and buzzer sounds
     else {
@@ -62,6 +64,7 @@ void loop() {
       digitalWrite(g, LOW);
       digitalWrite(b, LOW);
       tone(buzzer, 500);  // Buzzer sounds at high frequency--500hz
+      Serial.println("DANGER: THREAT DETECTED");
     }
   }
   for (int deg = 180; deg > 0; deg--) {
@@ -90,6 +93,7 @@ void loop() {
       digitalWrite(r, HIGH);
       digitalWrite(b, LOW);
       tone(buzzer, 100);  //Buzzer sounds at low frequency--100hz
+      Serial.println("WARNING");
     }
     // If something is in close range (less than 10 millimeters), trigger alert mode. LED flashes red and buzzer sounds
     else {
@@ -97,6 +101,7 @@ void loop() {
       digitalWrite(g, LOW);
       digitalWrite(b, LOW);
       tone(buzzer, 500);  // Buzzer sounds at high frequency--500hz
+      Serial.println("DANGER: THREAT DETECTED");
     }
   }
 }
