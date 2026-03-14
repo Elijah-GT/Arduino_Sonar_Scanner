@@ -14,7 +14,8 @@ Components:
 ![Top Down View](images/IMG_0772.JPG)
 
 ##Demo Video
-![Demonstration](https://youtu.be/WceeOpqa-ak)
+## Demo Video
+[![Watch the demo](https://img.youtube.com/vi/WceeOpqa-ak/0.jpg)](https://youtu.be/WceeOpqa-ak)
 
 
 
