@@ -10,8 +10,9 @@ Components:
     -Hot Glue Gun
     -Masking Tape
 
-![Front Image]("E:\Arduino Projects\Pictures\Sonar Scanner\IMG_0769.JPG")
-![Top Down View]("E:\Arduino Projects\Pictures\Sonar Scanner\IMG_0772.JPG")
+![Front Image](images/IMG_0767.JPG)
+![Top Down View](images/IMG_0772.JPG)
+
 
 
 
