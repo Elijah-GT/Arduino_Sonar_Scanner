@@ -50,21 +50,25 @@ void loop() {
       digitalWrite(b, LOW);
       noTone(buzzer);
     }
-    // If distance is less than 40 millimeters but greater than 10 millimeters then light turns yellow
+    // If distance is less than 40 centimeters but greater than 10 centimeters then light turns yellow
     else if (distance > 10) {
       digitalWrite(g, HIGH);
       digitalWrite(r, HIGH);
       digitalWrite(b, LOW);
       tone(buzzer, 100);  //Buzzer sounds at low frequency--100hz
-      Serial.println("WARNING");
+      Serial.println("WARNING, THREAT DISTANCE: ");
+      Serial.print(distance);
+      Serial.println("cm");
     }
-    // If something is in close range (less than 10 millimeters), trigger alert mode. LED flashes red and buzzer sounds
+    // If something is in close range (less than 10 centimeters), trigger alert mode. LED flashes red and buzzer sounds
     else {
       digitalWrite(r, HIGH);
       digitalWrite(g, LOW);
       digitalWrite(b, LOW);
       tone(buzzer, 500);  // Buzzer sounds at high frequency--500hz
-      Serial.println("DANGER: THREAT DETECTED");
+      Serial.print("RED ALERT, THREAT DISTANCE: ");
+      Serial.print(distance);
+      Serial.println("cm");
     }
   }
   for (int deg = 180; deg > 0; deg--) {
@@ -87,21 +91,26 @@ void loop() {
       digitalWrite(b, LOW);
       noTone(buzzer);
     }
-    // If distance is less than 40 millimeters but greater than 10 millimeters then light turns yellow
+    // If distance is less than 40 centimeters but greater than 10 centimeters then light turns yellow
     else if (distance > 10) {
       digitalWrite(g, HIGH);
       digitalWrite(r, HIGH);
       digitalWrite(b, LOW);
       tone(buzzer, 100);  //Buzzer sounds at low frequency--100hz
-      Serial.println("WARNING");
+      Serial.println("WARNING, THREAT DISTANCE");
+      Serial.print(distance);
+      Serial.println("cm");
     }
-    // If something is in close range (less than 10 millimeters), trigger alert mode. LED flashes red and buzzer sounds
+    // If something is in close range (less than 10 centimeters), trigger alert mode. LED flashes red and buzzer sounds
     else {
       digitalWrite(r, HIGH);
       digitalWrite(g, LOW);
       digitalWrite(b, LOW);
       tone(buzzer, 500);  // Buzzer sounds at high frequency--500hz
-      Serial.println("DANGER: THREAT DETECTED");
+      Serial.print("RED ALERT, THREAT DISTANCE: ");
+      Serial.print(distance);
+      Serial.println("cm");
+
     }
   }
 }
