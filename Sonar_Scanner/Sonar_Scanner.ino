@@ -56,7 +56,7 @@ void loop() {
       digitalWrite(r, HIGH);
       digitalWrite(b, LOW);
       tone(buzzer, 100);  //Buzzer sounds at low frequency--100hz
-      Serial.println("WARNING, THREAT DISTANCE: ");
+      Serial.print("WARNING, THREAT DISTANCE: ");
       Serial.print(distance);
       Serial.println("cm");
     }
@@ -97,7 +97,7 @@ void loop() {
       digitalWrite(r, HIGH);
       digitalWrite(b, LOW);
       tone(buzzer, 100);  //Buzzer sounds at low frequency--100hz
-      Serial.println("WARNING, THREAT DISTANCE");
+      Serial.print("WARNING, THREAT DISTANCE");
       Serial.print(distance);
       Serial.println("cm");
     }
