@@ -10,11 +10,11 @@ Components:
     -Hot Glue Gun
     -Masking Tape
 
-![Front Image](images/IMG_0767.JPG)
-![Top Down View](images/IMG_0772.JPG)
+![Front Image](images/Front%20View.JPG)
+![Top Down View](images/Top-Down%20View.JPG)
 
 ## Demo Video
-[![Watch the demo](https://img.youtube.com/vi/ywnlHn5JRW/0.jpg)](https://youtu.be/ywnlHn5JRW0)
+[![Watch the demo](https://img.youtube.com/vi/ywnlHn5JRW0/0.jpg)](https://youtu.be/ywnlHn5JRW0)
 
 
 
